@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--delay);
+  will-change: transform, opacity;
+}
+
+.scroll-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.stagger-children > *:nth-child(1) { transition-delay: 100ms; }
+.stagger-children > *:nth-child(2) { transition-delay: 200ms; }
+.stagger-children > *:nth-child(3) { transition-delay: 300ms; }
+.stagger-children > *:nth-child(4) { transition-delay: 400ms; }
+.stagger-children > *:nth-child(5) { transition-delay: 500ms; }
+.stagger-children > *:nth-child(6) { transition-delay: 600ms; }
+
+.stagger-children.animate-in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chrome-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #fff, #ccc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.floating-bubble {
+  animation: floating 8s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(-5px, 15px);
+  }
+  75% {
+    transform: translate(-15px, -5px);
+  }
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 77, 0, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* Chrome effect for cards and buttons */
+.chrome-effect {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Starry background */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration) ease-in-out infinite;
+  opacity: 0;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-100px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200px) scale(0.8);
+  }
+}
