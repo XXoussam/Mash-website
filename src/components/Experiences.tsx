@@ -1,9 +1,6 @@
 import React from 'react';
 import { MessageSquare, Mic, Bot, Workflow } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import ScrollReveal from './ScrollReveal';
->>>>>>> master
 
 const experiences = [
   {

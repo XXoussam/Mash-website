@@ -1,9 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import ScrollReveal from './ScrollReveal';
->>>>>>> master
 
 const reviews = [
   {

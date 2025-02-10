@@ -1,9 +1,6 @@
 import React from 'react';
 import { Database, Cloud, Link, Shield } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import ScrollReveal from './ScrollReveal';
->>>>>>> master
 
 const Integration = () => {
   return (
