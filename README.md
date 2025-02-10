@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# MASH-Landing-Page
-
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/XXoussam/MASH-Landing-Page)
-=======
 # MASH - Modern AI Solutions Website
 
 A modern, responsive website for AI automation services built with React, TypeScript, and Tailwind CSS.
@@ -53,4 +48,3 @@ npm run build
 ## License
 
 MIT
->>>>>>> master

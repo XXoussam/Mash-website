@@ -1,9 +1,6 @@
 import React from 'react';
 import { Zap, Clock, Shield, TrendingUp } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import ScrollReveal from './ScrollReveal';
->>>>>>> master
 
 const benefits = [
   {
