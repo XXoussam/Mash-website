@@ -1,49 +1,6 @@
 import React from 'react';
-import { Check } from 'lucide-react';
+import { Check, MessageSquare } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
-
-const plans = [
-  {
-    name: 'Starter',
-    price: '499',
-    description: 'Perfect for small businesses starting with AI automation',
-    features: [
-      'Up to 10,000 API calls/month',
-      'Basic AI models',
-      'Email support',
-      'Basic analytics',
-      '99.9% uptime SLA',
-    ],
-  },
-  {
-    name: 'Professional',
-    price: '999',
-    description: 'Ideal for growing companies with advanced needs',
-    features: [
-      'Up to 50,000 API calls/month',
-      'Advanced AI models',
-      'Priority support',
-      'Advanced analytics',
-      'Custom model training',
-      '99.99% uptime SLA',
-    ],
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'For large organizations requiring full customization',
-    features: [
-      'Unlimited API calls',
-      'Custom AI models',
-      '24/7 dedicated support',
-      'Enterprise analytics',
-      'Custom model training',
-      'Custom SLA',
-      'Dedicated account manager',
-    ],
-  },
-];
 
 const Pricing = () => {
   return (
@@ -56,69 +13,79 @@ const Pricing = () => {
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">
-              Transparent Pricing
+              Custom Solutions, Tailored Pricing
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI features with different levels of customization and support.
+              We believe in providing personalized solutions that perfectly match your business needs. Our pricing is customized to ensure you get exactly what you need - no more, no less.
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {plans.map((plan, index) => (
-            <ScrollReveal key={plan.name} delay={index * 100}>
-              <div
-                className={`relative chrome-effect rounded-xl p-8 ${
-                  plan.popular ? 'ring-2 ring-white' : ''
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-black px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-8">
-                  <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold gradient-text">${plan.price}</span>
-                    {plan.price !== 'Custom' && <span className="text-gray-400">/month</span>}
-                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <ScrollReveal key={feature} delay={(index * 100) + (featureIndex * 50)}>
-                      <li className="flex items-center text-gray-400">
-                        <Check className="h-5 w-5 text-white mr-2" />
-                        {feature}
-                      </li>
-                    </ScrollReveal>
-                  ))}
-                </ul>
-                <button
-                  className={`w-full py-2 px-4 rounded-full transition-colors ${
-                    plan.popular
-                      ? 'bg-white text-black hover:bg-gray-100'
-                      : 'bg-gray-800 text-white hover:bg-gray-700'
-                  }`}
-                >
-                  Get Started
-                </button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <ScrollReveal>
+            <div className="chrome-effect rounded-xl p-8">
+              <h3 className="text-2xl font-bold gradient-text mb-6">Why Custom Pricing?</h3>
+              <div className="space-y-6">
+                {[
+                  'Every business is unique with different needs and scales',
+                  'Flexible solutions that grow with your business',
+                  'Pay only for the features you need',
+                  'Transparent pricing with no hidden costs',
+                  'Scalable options for businesses of all sizes'
+                ].map((point, index) => (
+                  <ScrollReveal key={index} delay={index * 100}>
+                    <div className="flex items-start">
+                      <Check className="h-6 w-6 text-white mr-3 flex-shrink-0 mt-1" />
+                      <p className="text-gray-400">{point}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
               </div>
-            </ScrollReveal>
-          ))}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={300}>
+            <div className="chrome-effect rounded-xl p-8">
+              <h3 className="text-2xl font-bold gradient-text mb-6">Get Your Custom Quote</h3>
+              <p className="text-gray-400 mb-8">
+                Schedule a 30-minute consultation with our team to discuss your specific needs and get a tailored solution that fits your budget.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 text-gray-400">
+                  <MessageSquare className="h-6 w-6 text-white" />
+                  <span>Detailed project assessment</span>
+                </div>
+                <div className="flex items-center space-x-4 text-gray-400">
+                  <Check className="h-6 w-6 text-white" />
+                  <span>Transparent cost breakdown</span>
+                </div>
+                <div className="flex items-center space-x-4 text-gray-400">
+                  <Check className="h-6 w-6 text-white" />
+                  <span>Flexible payment options</span>
+                </div>
+              </div>
+              <div className="mt-8">
+                <a
+                  href="https://cal.com/mash-automation/ai-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-8 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors text-center"
+                >
+                  Schedule AI Consultation
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
 
         <ScrollReveal delay={400}>
           <div className="mt-16 text-center">
             <p className="text-gray-400">
-              Need a custom solution?{' '}
-              <a href="#contact" className="text-white hover:text-gray-300">
-                Contact us
+              Need more information?{' '}
+              <a href="#contact" className="text-white hover:text-gray-300 underline">
+                Contact our team
               </a>{' '}
-              for enterprise pricing and features.
+              to discuss your project requirements.
             </p>
           </div>
         </ScrollReveal>

@@ -25,12 +25,6 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-left">
-            <div className="inline-flex items-center bg-[#1A1A1A]/50 rounded-full px-4 py-2 mb-8 chrome-card">
-              <span className="text-sm text-gray-300 font-medium">
-                SAAS AI WEB3 FRAMER TEMPLATE
-              </span>
-            </div>
-
             <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 AI-Driven Solutions for Modern Businesses
@@ -44,31 +38,15 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-16">
-              <button className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-gray-100 text-black rounded-full font-medium transition-all flex items-center justify-center group">
+              <a
+                href="https://cal.com/mash-automation/ai-consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-gray-100 text-black rounded-full font-medium transition-all flex items-center justify-center group"
+              >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-
-            <div className="grid grid-cols-3 gap-8 text-left">
-              <div>
-                <h3 className="text-4xl font-bold mb-1">
-                  380<span className="text-gray-400">+</span>
-                </h3>
-                <p className="text-gray-400">User Active</p>
-              </div>
-              <div>
-                <h3 className="text-4xl font-bold mb-1">
-                  230<span className="text-gray-400">+</span>
-                </h3>
-                <p className="text-gray-400">Trusted by Company</p>
-              </div>
-              <div>
-                <h3 className="text-4xl font-bold mb-1">
-                  $230M<span className="text-gray-400">+</span>
-                </h3>
-                <p className="text-gray-400">Transaction</p>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -91,4 +69,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero

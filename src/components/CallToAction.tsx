@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MessageSquare } from 'lucide-react';
 
 const CallToAction = () => {
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
+    <section id="contact" className="py-20 bg-black relative overflow-hidden">
       {/* Floating Spheres */}
       <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gray-700 rounded-full blur-xl opacity-20 floating" style={{ animationDelay: '0.7s' }} />
       <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gray-700 rounded-full blur-xl opacity-20 floating" style={{ animationDelay: '1.2s' }} />
@@ -18,14 +18,24 @@ const CallToAction = () => {
               <p className="text-gray-400 mb-8">
                 Join hundreds of businesses that have already revolutionized their operations with our AI automation solutions. Get started today and see the difference tomorrow.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="inline-flex items-center px-8 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-black transition-colors">
-                  Schedule Demo
-                </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://cal.com/mash-automation/ai-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-white hover:bg-gray-100 text-black rounded-full font-medium transition-all flex items-center justify-center group"
+                >
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                  Schedule a Consultation
+                </a>
+                <a
+                  href="https://cal.com/mash-automation/ai-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm chrome-effect rounded-full font-medium transition-all flex items-center justify-center"
+                >
+                  Contact Sales
+                </a>
               </div>
             </div>
             <div className="relative">

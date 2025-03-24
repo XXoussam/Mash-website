@@ -15,8 +15,8 @@ const experiences = [
   },
   {
     icon: MessageSquare,
-    title: 'GHL Integration',
-    description: 'Seamless Go High Level integration enabling automated marketing, communication, and customer relationship management.',
+    title: 'AI Agents',
+    description: 'Powerful AI agents that automate complex tasks, enabling seamless marketing, communication, and customer relationship management for businesses.',
     metrics: {
       automation: '90%',
       efficiency: '75%',
@@ -47,7 +47,7 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
+    <section id="experiences" className="py-20 bg-black relative overflow-hidden">
       {/* Floating Spheres */}
       <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gray-700 rounded-full blur-xl opacity-20 floating" style={{ animationDelay: '0.3s' }} />
       <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gray-700 rounded-full blur-xl opacity-20 floating" style={{ animationDelay: '0.8s' }} />
