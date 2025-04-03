@@ -45,11 +45,11 @@ const Reviews = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-8">
           {reviews.map((review, index) => (
             <ScrollReveal key={review.name} delay={index * 100}>
-              <div className="chrome-effect rounded-xl p-3 sm:p-5 md:p-8 hover:bg-gray-800/10 transition-colors h-full flex flex-col">
-                <div className="flex items-center mb-2 sm:mb-3 md:mb-4">
+              <div className="chrome-effect rounded-xl p-5 sm:p-5 md:p-8 hover:bg-gray-800/10 transition-colors h-full flex flex-col">
+                <div className="flex items-center mb-3 sm:mb-3 md:mb-4">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star
                       key={i}
@@ -57,7 +57,7 @@ const Reviews = () => {
                     />
                   ))}
                 </div>
-                <p className="text-gray-400 text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-6 flex-grow">{review.content}</p>
+                <p className="text-gray-400 text-sm sm:text-sm md:text-base mb-4 sm:mb-4 md:mb-6 flex-grow leading-relaxed">{review.content}</p>
                 <div className="flex items-center">
                   <img
                     src={review.image}
@@ -65,8 +65,8 @@ const Reviews = () => {
                     className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full object-cover"
                   />
                   <div className="ml-2 sm:ml-3 md:ml-4">
-                    <p className="text-white font-semibold text-xs sm:text-sm md:text-base">{review.name}</p>
-                    <p className="text-gray-400 text-xs md:text-sm">{review.role}</p>
+                    <p className="text-white font-semibold text-sm sm:text-sm md:text-base">{review.name}</p>
+                    <p className="text-gray-400 text-xs sm:text-xs md:text-sm truncate max-w-[150px] sm:max-w-[180px] md:max-w-full">{review.role}</p>
                   </div>
                 </div>
               </div>
