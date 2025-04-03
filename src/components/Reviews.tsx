@@ -1,4 +1,4 @@
-import React from 'react';
+// Component imports
 import { Star } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
@@ -45,28 +45,28 @@ const Reviews = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 md:gap-8">
           {reviews.map((review, index) => (
             <ScrollReveal key={review.name} delay={index * 100}>
-              <div className="chrome-effect rounded-xl p-8 hover:bg-gray-800/10 transition-colors">
-                <div className="flex items-center mb-4">
+              <div className="chrome-effect rounded-xl p-3 sm:p-5 md:p-8 hover:bg-gray-800/10 transition-colors h-full flex flex-col">
+                <div className="flex items-center mb-2 sm:mb-3 md:mb-4">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-5 w-5 text-white fill-current"
+                      className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-white fill-current"
                     />
                   ))}
                 </div>
-                <p className="text-gray-400 mb-6">{review.content}</p>
+                <p className="text-gray-400 text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-6 flex-grow">{review.content}</p>
                 <div className="flex items-center">
                   <img
                     src={review.image}
                     alt={review.name}
-                    className="h-12 w-12 rounded-full object-cover"
+                    className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full object-cover"
                   />
-                  <div className="ml-4">
-                    <p className="text-white font-semibold">{review.name}</p>
-                    <p className="text-gray-400 text-sm">{review.role}</p>
+                  <div className="ml-2 sm:ml-3 md:ml-4">
+                    <p className="text-white font-semibold text-xs sm:text-sm md:text-base">{review.name}</p>
+                    <p className="text-gray-400 text-xs md:text-sm">{review.role}</p>
                   </div>
                 </div>
               </div>
@@ -75,16 +75,16 @@ const Reviews = () => {
         </div>
 
         <ScrollReveal delay={400}>
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center space-x-8 chrome-effect rounded-xl p-8">
+          <div className="mt-8 sm:mt-12 md:mt-16 text-center">
+            <div className="inline-flex flex-col sm:flex-row items-center sm:space-x-4 md:space-x-8 chrome-effect rounded-xl p-4 sm:p-6 md:p-8">
               <img
                 src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80"
                 alt="Company office"
-                className="h-16 w-16 object-cover rounded-lg"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-cover rounded-lg mb-3 sm:mb-0"
               />
-              <div className="text-left">
-                <p className="text-2xl font-bold gradient-text">98% Client Satisfaction</p>
-                <p className="text-gray-400">Based on independent reviews</p>
+              <div className="text-center sm:text-left">
+                <p className="text-xl sm:text-xl md:text-2xl font-bold gradient-text">98% Client Satisfaction</p>
+                <p className="text-gray-400 text-xs sm:text-sm md:text-base">Based on independent reviews</p>
               </div>
             </div>
           </div>
